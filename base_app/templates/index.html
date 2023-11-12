@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1>INDEX PAGE</h1>
+  <p class="lead">content</p>
+</div>
+
+    {% if quote.quote == 'no_quotes' %}
+    {% else %}
+    <!--the quote box-->
+      <div class="box">
+            <h2>QUOTE</h2>
+            <h3>{{ quote.quote }}</h3>
+            <h4>-- {{ quote.character }}</h4>
+            <a href="{{ url_for('home.index') }}">
+                <input type="submit" name="" value="Another one?">
+            </a>
+      </div>
+    {% endif %}
+
+
+{% endblock %}

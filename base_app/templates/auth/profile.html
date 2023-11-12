@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>PROFILE</h1>
+</div>
+
+<div class="container">
+
+<h3>Welcome, {{ current_user.name | capitalize }}</h3>
+
+<ul class="list-group">
+    <li>
+        <h5>
+            Name:
+        </h5>
+        <code>
+            {{ current_user.name }}
+        </code>
+    </li>
+    <li>
+        <h5>
+            Email:
+        </h5>
+        <code>
+            {{ current_user.email }}
+        </code>
+    </li>
+    <li>
+        <h5>
+            API Key:
+        </h5>
+        <code>
+            Bearer {{ token }}
+        </code>
+    </li>
+</ul>
+    <br/>
+    <p><a href="/renew" class="btn btn-primary"><span class="fa fa-key"></span> Renew API Token</a></p>
+    <br/>
+    <p><a href="/passwordreset" class="btn btn-primary"><span class="fa fa-key"></span> Reset Password</a></p>
+    <br/>
+    <p><a href="/signout" class="btn btn-primary">
+          <span class="fa fa-sign-out"></span> Sign out
+    </a></p>
+
+
+</div>
+
+{% endblock %}
