@@ -20,7 +20,7 @@ The purpose of this repo is to build a simple boilerplate to deploy web ideas ra
 
 # Install
 
-    git clone https://gitlab.com/deafmice/flask_app_boiler.git
+    git clone https://github.com/ephergent/flask_app_boiler.git
     cd flask_app_boiler
     virtualenv -p python3 venv
     source venv/bin/activate
